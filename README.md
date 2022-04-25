@@ -1,8 +1,10 @@
 # csproj-version
 
-Node.js-based tool to modify the version in a C# project file (`.csproj`).
+Node.js-based tool to modify the version in a `package.json` file.
 
 Main use case is CI automation.
+
+Note that this works similar to `npm version`, but without creating tags.
 
 ## Installation
 
