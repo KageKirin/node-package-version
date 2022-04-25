@@ -1,0 +1,24 @@
+{
+  "name": "node-package-version",
+  "version": "0.0.0",
+  "description": "Utility to get/set/bump the version of package.json",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KageKirin/node-package-version.git"
+  },
+  "keywords": [
+    "semver"
+  ],
+  "author": "Chris Helmich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KageKirin/node-package-version/issues"
+  },
+  "homepage": "https://github.com/KageKirin/node-package-version#readme",
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "glob": "^7.2.0"
+  }
+}
