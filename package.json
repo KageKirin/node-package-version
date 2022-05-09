@@ -3,6 +3,9 @@
   "version": "0.0.2",
   "description": "Utility to get/set/bump the version of package.json",
   "main": "index.js",
+  "bin": {
+    "node-package-version": "index.js"
+  },
   "scripts": {},
   "repository": {
     "type": "git",
