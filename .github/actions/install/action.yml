@@ -1,0 +1,13 @@
+name: Install node-package-version
+runs:
+  using: composite
+  steps:
+  - name: Install
+    shell: bash
+    run: |-
+      npm install -g https://github.com/kagekirin/node-package-version/tarball/main
+  - name: Verify installation
+    shell: bash
+    run: |-
+      which node-package-version
+      node-package-version --version
