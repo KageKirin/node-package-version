@@ -1,0 +1,22 @@
+name: Set package version
+inputs:
+  file:
+    description: path to package.json
+    required: false
+    default: package.json
+  version:
+    description: version in SemVer format
+    required: true
+outputs:
+  version:
+    description: version set to ${{ inputs.file }}
+    value: ${{ steps.set.outputs.value }}
+runs:
+  using: composite
+  steps:
+  - id: set
+    name: Set package version to ${{ inputs.file }}
+    shell: bash
+    run: |-
+      node-package-version set --version ${{ inputs.version}} ${{ inputs.file }}
+      echo "value=$(node-package-version get ${{ inputs.file }})" >> $GITHUB_OUTPUT
