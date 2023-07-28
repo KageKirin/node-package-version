@@ -17,3 +17,6 @@ runs:
     run: |-
       node-package-version get ${{ inputs.file }}
       echo "version=$(node-package-version get ${{ inputs.file }})" >> $GITHUB_OUTPUT
+  - shell: bash
+    run: |-
+      echo ${{ steps.get.outputs.version }}
