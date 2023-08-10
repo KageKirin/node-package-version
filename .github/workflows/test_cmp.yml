@@ -119,7 +119,7 @@ jobs:
 
   test-action:
     runs-on: ubuntu-latest
-    name: Test Set Action
+    name: Test Compare Action
     steps:
       # To use this repository's private action,
       # you must check out the repository
