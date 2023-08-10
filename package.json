@@ -1,6 +1,6 @@
 {
   "name": "node-package-version",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Utility to get/set/bump the version of package.json",
   "main": "index.js",
   "bin": {
