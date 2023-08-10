@@ -19,8 +19,9 @@ runs:
     name: Get package version from ${{ inputs.file }}
     shell: bash
     run: |-
-      node-package-version get --regex '${{ inputs.regex }}' '${{ inputs.file }}'
-      echo "version=$(node-package-version get --regex '${{ inputs.regex }}' '${{ inputs.file }}')" >> $GITHUB_OUTPUT
+      version=$(node-package-version get --regex '${{ inputs.regex }}' '${{ inputs.file }}')
+      echo ${version}
+      echo "version=${version}" >> $GITHUB_OUTPUT
   - shell: bash
     run: |-
       echo ${{ steps.get.outputs.version }}
