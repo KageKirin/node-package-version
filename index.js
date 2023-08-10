@@ -191,8 +191,8 @@ function bump_version()
             if (ver)
             {
                 let [major, minor, patch, prerelease, buildmetadata] = ver;
-                console.dir({ver});
-                console.dir({major, minor, patch, prerelease, buildmetadata});
+                //console.dir({ver});
+                //console.dir({major, minor, patch, prerelease, buildmetadata});
 
                 if (args.major)
                 {
