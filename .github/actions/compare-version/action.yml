@@ -14,7 +14,7 @@ inputs:
 outputs:
   result:
     description: Result of comparison, -1 -> given version is small than package version, 1 -> greater, 0 -> equal
-    value: ${{ steps.cmp.outputs.value }}
+    value: ${{ steps.cmp.outputs.result }}
 runs:
   using: composite
   steps:
@@ -22,5 +22,6 @@ runs:
     name: Compare package version '${{ inputs.version }}' to ${{ inputs.file }}
     shell: bash
     run: |-
-      node-package-version cmp --version '${{ inputs.version}}' --regex '${{ inputs.regex }}' '${{ inputs.file }}'
-      echo "value=$(node-package-version cmp --version '${{ inputs.version}}' --regex '${{ inputs.regex }}' '${{ inputs.file }}')" >> $GITHUB_OUTPUT
+      result=$(node-package-version cmp --version '${{ inputs.version}}' --regex '${{ inputs.regex }}' '${{ inputs.file }}')
+      echo ${result}
+      echo "result=${result}" >> $GITHUB_OUTPUT
